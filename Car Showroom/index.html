@@ -1,0 +1,338 @@
+<html>
+    <head>
+        <title>DELUXE AUTO</title>
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="menu.css">
+        <link rel="stylesheet" href="slider.css">
+        <link rel="stylesheet" href="context.css">
+        <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="feedback.css">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans">
+    </head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'PT Sans', sans-serif;
+            font-size: 14px;
+            line-height: 22px;
+            margin: 0px;
+            background: url(images/background.jpg) 100% 100%;
+            background-attachment: fixed;
+            background-size: 100%;
+            min-width: 600px;
+        }
+        </style>
+    
+    <body>
+    <div style="min-height: 100%;">
+        <div class="header">
+            <div class="header-block">
+                <div class="title-holder">
+                    <img class="logo" src="images/logo.jpg">
+                </div>
+                <div style="float: left; margin-left: 5px;">
+                    <br><span class="name-company">DELUXE AUTO</span><br><br>
+                    <span class="subtitle">Speed <b>​​&</b> Power</span>
+                </div>
+            </div>
+            <div class="header-block">
+                <span class="number">+38(066) 777-77-77</span><br>
+                <span class="number">+38(063) 777-77-77</span><br>
+                <span class="feedback-text">
+                    <label for="feedback1">Обратная связь</label>
+                </span>
+            </div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="index.html" class="menu-text">ГЛАВНАЯ</a>
+                    <span class="bar-between-menu-items">|</span>
+                </li>
+                <li>
+                    <a href="#contents" class="menu-text">КАТАЛОГ</a>
+                    <span class="bar-between-menu-items">|</span>
+                </li>
+                <li>
+                    <a href="#" class="menu-text">ДОСТАВКА И ОПЛАТА</a>
+                    <span class="bar-between-menu-items">|</span>
+                </li>
+                <li>
+                    <a href="price-list.html" class="menu-text">ПРАЙС ЛИСТ</a>
+                    <span class="bar-between-menu-items">|</span>
+                </li>
+                <li>
+                    <a href="contacts.html" class="menu-text">КОНТАКТЫ</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="slider-container">
+            <input type="radio" name="slides" id="slide1" checked>
+            <input type="radio" name="slides" id="slide2">
+            <input type="radio" name="slides" id="slide3">
+            <input type="radio" name="slides" id="slide4">
+            <input type="radio" name="slides" id="slide5">
+            <input type="radio" name="slides" id="slide6">
+            
+            <div class="slider">    
+              <div class="img img1">
+                <div class="frag"></div>
+              </div>
+              <div class="img img2">
+                <div class="frag"></div>
+              </div>
+              <div class="img img3">
+                <div class="frag"></div>
+              </div>
+              <div class="img img4">
+                <div class="frag"></div>
+              </div>
+              <div class="img img5">
+                <div class="frag"></div>
+              </div>
+              <div class="img img6">
+                <div class="frag"></div>
+              </div>
+            </div>
+            
+            <div class="side-controls">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+                <label for="slide4"></label>
+                <label for="slide5"></label>
+                <label for="slide6"></label>
+             </div>
+            
+            <div class="controls">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+                <label for="slide4"></label>
+                <label for="slide5"></label>
+                <label for="slide6"></label>
+            </div>
+        </div>
+        <script src="slider.js"></script>
+
+        <div class="content" id="contents">
+            <div class="path-section">
+                <a href="index.html" class="text-path-section">Главная</a> / 
+                <a href="#contents" class="text-path-section">Каталог</a> / 
+                <a href="#contents" class="text-path-section">Автомобили</a>
+            </div>
+            <div class="side-container">
+                <ul class="categories-container"> 
+                    <li><a href="#contents" class="categories-container-item"><u>АВТОМОБИЛИ</u></a>
+                        <ul class="inside-categories">
+                            <li><a href="#contents" class="categories-container-item"><u>Спортивные</u></a></li>
+                            <li><a href="#" class="categories-container-item">Семейные</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="categories-container-item">АКСЕССУАРЫ</a> </li>
+                    <li><a href="contacts.html" class="categories-container-item">ДРУГОЕ</a> </li>
+                </ul>
+                    <div class="price">
+                        <a href="doc/PriceList.xlsx"  download>
+                        <img src="images/prise.jpg" alt="excel-logo" width="110px" style="margin-bottom: 10px;">
+                        <br>ПРАЙС-ЛИСТ
+                        </a>
+                    </div>
+            </div>
+
+            <input type="radio" name="products-container" id="container1" checked>
+            <input type="radio" name="products-container" id="container2">
+            <input type="radio" name="products-container" id="container3">
+            <input type="radio" name="products-container" id="container4">
+            <input type="radio" name="products-container" id="container5">
+
+            <div class="main-products-container" id="main-products-container">    
+                <div class="products-container products-container1">
+                    <div class="product-frag">
+                    <div class="product">
+                        <div class="product-img product-img1"></div>
+                        <div class="product-name">LAMBORGHINI SIAN</div>
+                        <div class="product-description">
+                            cамый мощный суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">3 600 000 $</div>
+                    </div>
+                    <div class="product ">
+                        <div class="product-img product-img2"></div>
+                        <div class="product-name">TESLA ROADSTER</div>
+                        <div class="product-description">
+                            Cамый мощный суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">400 000 $</div>
+                    </div>
+                    <div class="product ">
+                        <div class="product-img product-img3"></div>
+                        <div class="product-name">RENAULT ALPHINE</div>
+                        <div class="product-description">
+                            Cамый мощный суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">270 000 $</div>
+                    </div>
+                    <div class="product ">
+                        <div class="product-img product-img4"></div>
+                        <div class="product-name">CHEVROLET CORVETTE</div>
+                        <div class="product-description">
+                            Cамый мощный суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">110 000 $</div>
+                    </div>
+                    <div class="product ">
+                        <div class="product-img product-img5"></div>
+                        <div class="product-name">MERCEDES AMG ONE</div>
+                        <div class="product-description">
+                            Cамый мощный суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">2 700 000 $</div>
+                    </div>
+                    <div class="product">
+                        <div class="product-img product-img6"></div>
+                        <div class="product-name">BUGATTI DIVO</div>
+                        <div class="product-description">
+                            Cамый мощный суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">5 800 000 $</div>
+                    </div>
+                </div>
+                </div>
+                <div class="products-container products-container2">
+                    <div class="product-frag">
+                        <div class="product">
+                        <div class="product-img product-img7"></div>
+                        <div class="product-name">HONDA NSX</div>
+                        <div class="product-description">
+                            Cамый мощный суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">320 000 $</div>
+                        </div>
+                        <div class="product">
+                        <div class="product-img product-img8"></div>
+                        <div class="product-name">SUBARU BRZ</div>
+                        <div class="product-description">
+                            Cамый мощный суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">90 000 $</div>
+                        </div>
+                        <div class="product">
+                        <div class="product-img product-img9"></div>
+                        <div class="product-name">AUDIi E-TRON GT</div>
+                        <div class="product-description">
+                            Cамый мощным суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">205 000 $</div>
+                        </div>
+                        <div class="product">
+                        <div class="product-img product-img10"></div>
+                        <div class="product-name">KIA STINGER</div>
+                        <div class="product-description">
+                            Cамый мощным суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">95 000 $</div>
+                        </div>
+                        <div class="product">
+                        <div class="product-img product-img11"></div>
+                        <div class="product-name">BMW M4</div>
+                        <div class="product-description">
+                            Cамый мощным суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">280 000 $</div>
+                        </div>
+                        <div class="product">
+                        <div class="product-img product-img12"></div>
+                        <div class="product-name">BENTLEY BENTAYGA</div>
+                        <div class="product-description">
+                            Cамый мощным суперкар за всю историю марки       
+                        </div>
+                        <div class="product-price">710 000 $</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls-product">
+                  <label for="container1">1</label>
+                  <label for="container2">2</label>
+                  <label for="container3"></label>
+                  <label for="container4"></label>
+                </div>
+                <div class="center-section-bottom-text">
+                    Компания Deluxe Auto, основанная в 2020, является абсолютным лидером на рынке продаж автомобилей класса люкс. Помимо классической торговой линейки, мы предлагаем нашим клиентам набор премиум аксессуаров, таких как авто чехлы, акустические системы, услуги шиномонтажа и многое другое. Deluxe Auto представлены в более 20 странах мира на 4 континентах, в то время как главный офис находится в г. Киев, Украина. Это стало возможным благодаря сервису высочайшего класса, команде лучших профессионалов своего дела, а также заботе о наших клиентах даже после осуществления покупки. Ответственный подход и уникальное торговое предложение является нашим безоговорочным принципом.
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="footer-info">
+            © 2020 Deluxe Auto<br>
+        </div>
+        <div class="footer-menu">
+            <ul>
+                <li>
+                    <a href="index.html" class="menu-text">Главная</a>
+                </li>
+                <li>
+                    <a href="#contents" class="menu-text">Каталог</a>
+                </li>
+                <li>
+                    <a href="#" class="menu-text">Доставка и оплата</a>
+                </li>
+                <li>
+                    <a href="price-list.html" class="menu-text">Прайс лист</a>
+                </li>
+                <li>
+                    <a href="contacts.html" class="menu-text">Контакты</a>
+                </li>
+            </ul>
+        </div>
+        <div class="sources">
+            +38(066) 777-77-77<br>
+            +38(063) 777-77-77<br>DeluxeAuto@gmail.com
+        </div>
+    </div>
+        <input type="radio" name="feedback-button" id="feedback1" style="position: absolute; z-index: 4;">        
+        <input type="radio" name="feedback-button" id="feedback2" style="position: absolute; z-index: 4; margin-left: 20px;" checked>        
+        <input type="radio" name="feedback-button" id="feedback2" style="position: absolute; z-index: 4; margin-left: 20px;" checked> 
+        <div class="feedback">
+            <div class="feedback-background">
+            </div>
+            <div class="feedback-item">
+                <label for="feedback2">
+                    <div class="feedback-close">
+                        <div class="feedback-close-item">
+                            <div class="close"></div>
+                        </div>
+                    </div>
+                </label>
+                <form class="form">
+                    <div class="feetback-name">ОБРАТНАЯ СВЯЗЬ</div>
+
+                <div class="form_grup">
+                    <input class="form_input" placeholder=" " required>
+                    <label class="form_label">Ваше имя*</label>
+                  </div>
+                  <div class="form_grup">
+                    <input class="form_input" placeholder=" " required>
+                    <label class="form_label">Телефон*</label>
+                  </div>
+                  <div class="form_grup">
+                    <input class="form_input" placeholder=" " required>
+                    <label class="form_label">Email*</label>
+                  </div>
+                  <div class="form_grup grup-text">
+                    <textarea class="form_input-text" placeholder=" "></textarea>
+                    <label class="form_label">Сообщение</label>
+                  </div>
+                  <label for="feedback3">
+                    <button class="form_button">ОТПРАВИТЬ</button></label>
+                </form>
+            </div>
+
+        </div>
+    </body>
+</html>
