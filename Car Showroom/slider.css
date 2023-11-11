@@ -1,145 +1,91 @@
-.slider1 {
-    position: relative;
-    display: block;
-    width: 60%;
-    height: 100%;
-    margin: auto;
-    padding: 0 10px;
-}
-.slide1 {
-    display: flex;
-    justify-content:space-between;
-    position: absolute;
-    z-index: 0;
-    width: 100%;
-    height: 60%;
-    background-position: center center;
-    background-size: cover;
-    opacity: 0;
-    transition: opacity 1s 0s ease-in-out;
-}
-.button {
-    position: relative;
-    top: 150px;
-    z-index: 2;
-    width: 30px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #849494;
-    margin: 20px;
-    float: left;
-    opacity: 0.4; 
-}
-.prev {
-    position: relative;
-    top: 10px;
-    left: -15px;
-    border: 20px solid transparent; 
-    border-right: 15px solid green;
-}
-.next {
-    position: relative;
-    top: 10px;
-    left: 10px;
-    border: 20px solid transparent; 
-    border-left: 15px solid green;
-}
-
-
-
-.slider-container > input {
-    display: none;
-}
-.slider-container {
-    position: relative;
-    width: 70%;
-    height: 55%;
-    margin: auto;
+.slider-div {
+  height: 55%;
 }
 @media screen and (min-width: 1200px) and (max-width: 1300px) {
-    .slider-container {
-        height: 50%;
-    }
+  .slider-div {
+    height: 50%;
+  }
 }
 @media screen and (min-width: 1080px) and (max-width: 1200px) {
-    .slider-container {
-        height: 45%;
-    }
+  .slider-div {
+    height: 45%;
+  }
 }
 @media screen and (min-width: 960px) and (max-width: 1080px) {
-    .slider-container {
-        height: 40%;
-    }
+  .slider-div {
+    height: 40%;
+  }
 }
 @media screen and (min-width: 845px) and (max-width: 960px) {
-    .slider-container {
-        height: 35%;
-    }
+  .slider-div {
+    height: 35%;
+  }
 }
 @media screen and (min-width: 720px) and (max-width: 845px) {
-    .slider-container {
-        height: 30%;
-    }
+  .slider-div {
+    height: 30%;
+  }
 }
 @media screen and (min-width: 605px) and (max-width: 720px) {
-    .slider-container {
-        height: 25%;
-    }
+  .slider-div {
+    height: 25%;
+  }
 }
 @media screen and (max-width: 605px) {
-    .slider-container {
-        height: 20%;
-    }
+  .slider-div {
+    height: 20%;
+  }
 }
 
-.slider, .img {
-    width: 100%;
-    height: 100%;
-    background-position: center center;
-    background-size: cover;
+.slider,
+.img {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
 }
 .slider {
-    position: relative;
-    overflow: hidden;
-    background-color: black;
-    border: 3px solid #eee;
-    border-radius: 5px;
-    box-shadow: 0 7px 20px rgb(0, 0,0, 0.5);
+  background-color: black;
+  border-radius: 5px;
+  box-shadow: 0 7px 20px rgb(0, 0, 0, 0.5);
 }
-.img {
-    position: absolute;
-}
-.img1 .frag { background-image: url(images/Renault_Alpine.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
 
-}    
-.img2 .frag { background-image: url(images/Chevrolet_Corvette.jpg); 
-    background-repeat: no-repeat;
-    background-size: 100%;
+.img1 .frag {
+  background-image: url(images/Renault_Alpine.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
-.img3 .frag { background-image: url(images/Subaru_BRZ.jpg); 
-    background-repeat: no-repeat;
-    background-size: 100%;
+.img2 .frag {
+  background-image: url(images/Chevrolet_Corvette.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
-.img4 .frag { background-image: url(images/img4.png); 
-    background-repeat: no-repeat;
-    background-size: 100%;
+.img3 .frag {
+  background-image: url(images/Subaru_BRZ.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
-.img5 .frag { background-image: url(images/Lamborghini_Sian2.jpg); 
-    background-repeat: no-repeat;
-    background-size: 100%;
+.img4 .frag {
+  background-image: url(images/img4.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
-.img6 .frag { background-image: url(images/img6.jpg) ; 
-    background-repeat: no-repeat;
-    background-size: 100%;
+.img5 .frag {
+  background-image: url(images/Lamborghini_Sian2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.img6 .frag {
+  background-image: url(images/img6.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .frag {
-    width: 100%;
-    height: inherit;
-    opacity: 0;
-    z-index: 0;
-    transition: transform .6s, opacity .6s, -webkit-filter 2s ease-out;
+  width: 100%;
+  height: inherit;
+  opacity: 0;
+  z-index: 0;
+  transition: transform 0.6s, opacity 0.6s, -webkit-filter 2s ease-out;
 }
 #slide1:checked ~ .slider .img1 .frag,
 #slide2:checked ~ .slider .img2 .frag,
@@ -147,25 +93,21 @@
 #slide4:checked ~ .slider .img4 .frag,
 #slide5:checked ~ .slider .img5 .frag,
 #slide6:checked ~ .slider .img6 .frag {
-    opacity: 1;
-    z-index: 1;
+  opacity: 1;
+  z-index: 1;
 }
 .controls {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    margin-left: -115px;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -115px;
 }
 .controls label {
-    display: block;
-    height: 10px;
-    width: 30px;
-    float: left;
-    margin-right: 10px;
-    background-color: white;
-    cursor: pointer;
-    opacity: 0.3;
-    transition: opacity 0.5s;
+  display: block;
+  height: 10px;
+  width: 30px;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: opacity 0.5s;
 }
 .controls label:hover,
 .side-controls label:hover,
@@ -175,20 +117,16 @@
 #slide4:checked ~ .controls label:nth-of-type(4),
 #slide5:checked ~ .controls label:nth-of-type(5),
 #slide6:checked ~ .controls label:nth-of-type(6) {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
-
 .side-controls label {
-    position: absolute;
-    top: 45%;
-    margin-top: -10px;
-    display: block;
-    z-index: 1;
-    cursor: pointer;
-    float: left;
-    opacity: 0.4; 
-    transition: opacity 0.5s;
+  top: 45%;
+  display: block;
+  z-index: 1;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity 0.5s;
 }
 #slide1:checked ~ .side-controls label:nth-of-type(6),
 #slide2:checked ~ .side-controls label:nth-of-type(1),
@@ -196,9 +134,9 @@
 #slide4:checked ~ .side-controls label:nth-of-type(3),
 #slide5:checked ~ .side-controls label:nth-of-type(4),
 #slide6:checked ~ .side-controls label:nth-of-type(5) {
-    margin-left: -15px;
-    border: 30px solid transparent; 
-    border-right: 30px solid white;
+  margin-left: -15px;
+  border: 30px solid transparent;
+  border-right: 30px solid white;
 }
 #slide1:checked ~ .side-controls label:nth-of-type(2),
 #slide2:checked ~ .side-controls label:nth-of-type(3),
@@ -206,117 +144,7 @@
 #slide4:checked ~ .side-controls label:nth-of-type(5),
 #slide5:checked ~ .side-controls label:nth-of-type(6),
 #slide6:checked ~ .side-controls label:nth-of-type(1) {
-    margin-left: 95%;
-    border: 30px solid transparent; 
-    border-left: 30px solid white;
-}
-
-@keyframes slide1   {
-    5% { opacity: 1; }
-    15% { opacity: 1; }
-    20% { opacity: 0; }
-    30% { opacity: 0; }
-    35% { opacity: 0; }
-    45% { opacity: 0; }
-    50% { opacity: 0; }
-    60% { opacity: 0; }
-    65% { opacity: 0; }
-    75% { opacity: 0; }
-    80% { opacity: 0; }
-    95% { opacity: 0; }
-}
-@keyframes  slide2  {
-    5% { opacity: 0; }
-    15% { opacity: 0; }
-    20% { opacity: 1; }
-    30% { opacity: 1; }
-    35% { opacity: 0; }
-    45% { opacity: 0; }
-    50% { opacity: 0; }
-    60% { opacity: 0; }
-    65% { opacity: 0; }
-    75% { opacity: 0; }
-    80% { opacity: 0; }
-    95% { opacity: 0; }
-}
- @keyframes  slide3  {
-    5% { opacity: 0; }
-    15% { opacity: 0; }
-    20% { opacity: 0; }
-    30% { opacity: 0; }
-    35% { opacity: 1; }
-    45% { opacity: 1; }
-    50% { opacity: 0; }
-    60% { opacity: 0; }
-    65% { opacity: 0; }
-    75% { opacity: 0; }
-    80% { opacity: 0; }
-    95% { opacity: 0; }
-}
- @keyframes  slide4  {
-    5% { opacity: 0; }
-    15% { opacity: 0; }
-    20% { opacity: 0; }
-    30% { opacity: 0; }
-    35% { opacity: 0; }
-    45% { opacity: 0; }
-    50% { opacity: 1; }
-    60% { opacity: 1; }
-    65% { opacity: 0; }
-    75% { opacity: 0; }
-    80% { opacity: 0; }
-    95% { opacity: 0; }
-}
- @keyframes  slide5  {
-    5% { opacity: 0; }
-    15% { opacity: 0; }
-    20% { opacity: 0; }
-    30% { opacity: 0; }
-    35% { opacity: 0; }
-    45% { opacity: 0; }
-    50% { opacity: 0; }
-    60% { opacity: 0; }
-    65% { opacity: 1; }
-    75% { opacity: 1; }
-    80% { opacity: 0; }
-    95% { opacity: 0; }
-}
- @keyframes  slide6  {
-    5% { opacity: 0; }
-    15% { opacity: 0; }
-    20% { opacity: 0; }
-    30% { opacity: 0; }
-    35% { opacity: 0; }
-    45% { opacity: 0; }
-    50% { opacity: 0; }
-    60% { opacity: 0; }
-    65% { opacity: 0; }
-    75% { opacity: 0; }
-    80% { opacity: 1; }
-    95% { opacity: 1; }
-}
-
-.img1 { 
-    animation: slide1 25s infinite; 
-    animation-play-state:paused; 
-}
-.img2  {
-    animation: slide2 25s infinite;  
-    animation-play-state:paused; 
-}
-.img3  {
-    animation: slide3 25s infinite;  
-    animation-play-state:paused; 
-}
-.img4  {
-   animation: slide4 25s infinite; 
-   animation-play-state:paused;
-}
-.img5  {
-    animation: slide5 25s infinite;
-    animation-play-state:paused;
-}
-.img6  {
-    animation: slide6 25s infinite;
-    animation-play-state:paused;
+  margin-left: 95%;
+  border: 30px solid transparent;
+  border-left: 30px solid white;
 }

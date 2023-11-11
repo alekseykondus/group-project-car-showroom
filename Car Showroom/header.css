@@ -1,47 +1,33 @@
 .header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
   background-color: #01153e;
-  color:white;
 }
 .header-block {
-  position: relative;
-  padding: 15px;
   letter-spacing: 3px;
-}
-.title-holder {
-    padding: 10px;
-    float: left;
 }
 .subtitle {
   font-family: sans-serif;
-  font-size: 1.0em;
+  font-size: 1em;
 }
 .name-company {
   font-family: sans-serif;
-  font-size: 2.0em;
-  font-weight: bolder;
+  font-size: 2em;
 }
 .logo {
   width: 100px;
   height: 110px;
 }
 .number {
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 1.6em;
-  line-height: 1.2em;      
+  line-height: 1.2em;
 }
 .feedback-text {
-  margin-top: 20px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 1.5em;
-  font-weight: bolder;
   border-bottom: 2px dashed white;
-  float: right;
 }
-
 .feedback-text:hover {
-  font-weight:bolder;
+  font-style: normal;
+  font-weight: bolder;
   text-shadow: #5dc8e5 0 0 10px;
 }
