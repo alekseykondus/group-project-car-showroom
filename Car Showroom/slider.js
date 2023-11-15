@@ -7,8 +7,8 @@ let counter = 0;
 setInterval(() => {
   const currentSlide = document.getElementById(sliderIds[counter]);
   currentSlide.checked = true;
-  console.log(currentSlide);
+//  console.log(currentSlide);
   counter++;
   counter = counter % 6;
-  console.log(counter);
+//  console.log(counter);
 }, 4000);
