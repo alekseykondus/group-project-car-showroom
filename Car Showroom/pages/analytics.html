@@ -11,11 +11,6 @@
     <link rel="stylesheet" href="context.css" />
     <link rel="stylesheet" href="footer.css" />
     <link rel="stylesheet" href="feedback.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://fonts.googleapis.com/css?family=PT+Sans"
-    />
     <meta name="viewport" content="width=width-device, initial-scale=1" />
   </head>
   <style>
@@ -30,6 +25,11 @@
       background: url(images/background.jpg) 100% 100%;
       background-attachment: fixed;
       background-size: 100%;
+    }
+    @media (max-width: 545px) {
+      .center-section-bottom-text {
+        margin-left: 50px;
+      }
     }
   </style>
 
@@ -69,8 +69,6 @@
           >
             <a href="cart/cart.html">
               <img
-                id="2"
-                class="add-car"
                 src="images/iconfinder-basket-4341280_120547.png"
                 width="100px"
                 height="100px"
@@ -100,11 +98,17 @@
                 <span class="text-light mr-2 ml-2">|</span>
               </li>
               <li class="list-inline-item position-relative">
-                <a href="contacts.html" class="menu-text text-light"
-                  >КОНТАКТЫ</a
-                >
-              </li>
-            </ul>
+               <a href="contacts.html" class="menu-text text-light"
+                 >КОНТАКТЫ</a
+               >
+               <span class="text-light mr-2 ml-2">|</span>
+             </li>
+             <li class="list-inline-item position-relative">
+               <a href="analytics.html" class="menu-text text-light"
+                 >АНАЛИТИКА</a
+               >
+               </li>
+           </ul>
           </div>
         </div>
         <div class="row slider-div">
@@ -188,7 +192,8 @@
           >
             <div class="p-2">
               <a href="index.html" class="text-path-section">Главная</a> /
-              <a href="#contents" class="text-path-section">Контакты</a>
+              <a href="#contents" class="text-path-section">Каталог</a> /
+              <a href="#contents" class="text-path-section">Автомобили</a>
             </div>
             <div class="row">
               <div
@@ -197,33 +202,29 @@
               >
                 <ul class="categories-container ml-n3">
                   <li>
-                    <a
-                      href="index.html#contents"
-                      class="categories-container-item"
+                    <a href="#contents" class="categories-container-item"
                       ><u>АВТОМОБИЛИ</u></a
                     >
                     <ul class="inside-categories">
                       <li>
-                        <a
-                          href="index.html#contents"
-                          class="categories-container-item"
+                        <a href="#contents" class="categories-container-item"
                           ><u>Спортивные</u></a
                         >
                       </li>
                       <li>
-                        <a href="index.html" class="categories-container-item"
+                        <a href="#" class="categories-container-item"
                           >Семейные</a
                         >
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="index.html" class="categories-container-item"
-                      >АКСЕССУАРЫ</a
-                    >
+                    <a href="#" class="categories-container-item">АКСЕССУАРЫ</a>
                   </li>
                   <li>
-                    <a href="#" class="categories-container-item">ДРУГОЕ</a>
+                    <a href="contacts.html" class="categories-container-item"
+                      >ДРУГОЕ</a
+                    >
                   </li>
                 </ul>
                 <div class="w-100 m-4 pl-4">
@@ -231,7 +232,7 @@
                     <img
                       src="images/prise.jpg"
                       alt="excel-logo"
-                      width="120px"
+                      width="100px"
                     />
                     <br />
                     <h5 class="text-dark">ПРАЙС-ЛИСТ</h5>
@@ -269,31 +270,28 @@
                 name="products-container"
                 id="container5"
               />
-
               <div
                 class="
                   col-9 col-sm-9 col-md-9 col-lg-9
                   clo-xl-9
                   main-products-container
+                  ml-n5
+                  p-0
                 "
                 id="main-products-container"
               >
-                <div class="mb-5">
-                  <h1 class="font-weight-bolder my-3">КОНТАКТЫ</h1>
-                  Вы можете связаться с нами по указанным номерам телефонов:
-                  <ul>
-                    <li>+38(066) 777-77-77</li>
-                    <li>+38(063) 777-77-77</li>
-                  </ul>
-                  Колл-центр Deluxe Auto открыт ежедневно с 08:00 до 21:00.<br /><br />
-                  Напишите нам по электронной почте:
-                  <h2 class="font-weight-bolder">DeluxeAuto@gmail.com</h2>
-                  или воспользуйтесь
-                  <span class="menu-text" style="color: black"
-                    ><label for="feedback1">формой обратной связи</label></span
-                  >.<br /><br />
-                  Наши менеджеры ответят на все ваши вопросы и помогут решить
-                  любую проблему.
+
+              <select id="period" class="form-control" onchange="PeriodChanged()">
+                <option> Весь период </option>
+                <option> Определённый период </option>
+              </select>
+              <div id = "periodStartEnd" class="form-row"></div>
+              <div id="sales-amount" class="py-1 px-1">
+              </div>
+              
+              <script src="analytics.js"></script>
+
+                <div class="float-left products-container1">
                 </div>
                 <div class="center-section-bottom-text w-100 text-justify">
                   Компания Deluxe Auto, основанная в 2020, является абсолютным
@@ -313,6 +311,8 @@
             </div>
           </div>
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="cart.js"></script>
       </div>
       <div class="row footer text-light p-3">
         <div class="col-4 col-sm-4 col-md-4 col-lg-4 clo-xl-4">
@@ -346,7 +346,8 @@
         <div class="col-4 col-sm-4 col-md-4 col-lg-4 clo-xl-4 text-center">
           <div class="m-4">
             +38(066) 777-77-77<br />
-            +38(063) 777-77-77<br />DeluxeAuto@gmail.com
+            +38(063) 777-77-77<br />
+            DeluxeAuto @gmail.com
           </div>
         </div>
       </div>
