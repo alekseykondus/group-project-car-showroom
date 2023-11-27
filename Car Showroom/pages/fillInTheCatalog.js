@@ -23,7 +23,7 @@ fetch('/getCarsFromDBToIndex', {
                console.log("photo: ", carsTable[i]['pathToPhoto']);
                document.getElementById("img-Car-" + carId).setAttribute('style', "  background-image: url(images/" + carsTable[i]['pathToPhoto'] + ");");
                CreateElement("div", "name-Car-" + carId, carsTable[i]['name'], "car-" + carId).classList.add("product-name", "mt-3", "text-light", "font-weight-bolder");
-               CreateElement("div", "description1-Car-" + carId, "Обьём двигателя: " + carsTable[i]['engineVolume'] + "\n Коробка передачь: " + carsTable[i]['transmission'], "car-" + carId).classList.add("product-description", "w-100", "p-3", "text-light");
+               CreateElement("div", "description1-Car-" + carId, "Об'єм двигуна: " + carsTable[i]['engineVolume'] + "\n Коробка передач: " + carsTable[i]['transmission'], "car-" + carId).classList.add("product-description", "w-100", "p-3", "text-light");
                CreateElement("div", "price-Car" + carId, carsTable[i]['price'].toLocaleString(), "car-" + carId).classList.add("product-price", "text-light", "font-weight-bolder");
                if (carsTable[i]['inStock'] == "0") {
                     console.log(carsTable[i]['name']);
@@ -48,7 +48,7 @@ CreateElement("div", "car-1", "", "catalog").classList.add("product", "text-cent
 CreateElement("div", "img-Car-1", "", "car-1").classList.add("product-img", "mt-2", "border", "mx-auto");
 document.getElementById("img-Car-1").setAttribute('style', "  background-image: url(images/Tesla_Roadster.jpg);");
 CreateElement("div", "name-Car-1", "LAMBORGHINI SIAN", "car-1").classList.add("product-name", "mt-3", "text-light", "font-weight-bolder");
-CreateElement("div", "description1-Car-1", "Обьём двигателя: 5.5 \n Коробра передачь: автомат", "car-1").classList.add("product-description", "w-100", "p-3", "text-light");
+CreateElement("div", "description1-Car-1", "Об'єм двигуна: 5.5 \n Коробра передачь: автомат", "car-1").classList.add("product-description", "w-100", "p-3", "text-light");
 CreateElement("div", "price-Car1", "111111", "car-1").classList.add("product-price", "text-light", "font-weight-bolder");
 CreateElement("button", "20", "", "car-1").classList.add("add-car", "btn", "btn-secondary", "mt-n3", "mr-2", "pb-1", "position-relative", "float-right");
 document.getElementById("20").setAttribute('type', "button");

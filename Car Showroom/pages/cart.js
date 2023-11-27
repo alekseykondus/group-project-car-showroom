@@ -134,27 +134,27 @@ function buttonCheckoutOnClick() {
      CreateElement("div", "div-close", "", "div-Checkout-close").classList.add("feedback-close-item", "bg-white");
      CreateElement("div", "close", "", "div-close").classList.add("close", "position-relative");
 
-     CreateElement("h1", "div-Checkout-header", "Оформление заказа", "div-Checkout-item").classList.add("text-center", "font-weight-bolder", "mb-2");
+     CreateElement("h1", "div-Checkout-header", "Оформлення замовлення", "div-Checkout-item").classList.add("text-center", "font-weight-bolder", "mb-2");
 
      CreateElement("form", "form", "", "div-Checkout-item");
 
      CreateElement("div", "form-element-empl", "", "form").classList.add("mb-3");
-     CreateElement("label", "form-empl-label", "Работник *", "form-element-empl").classList.add("form-label");
+     CreateElement("label", "form-empl-label", "Працівник *", "form-element-empl").classList.add("form-label");
      CreateElement("select", "form-empl-select", "", "form-element-empl").classList.add("form-control");
      addOptions();
 
      CreateElement("div", "form-element-name", "", "form").classList.add("mb-3");
-     CreateElement("label", "form-name-label", "Имя *", "form-element-name").classList.add("form-label");
+     CreateElement("label", "form-name-label", "Ім'я *", "form-element-name").classList.add("form-label");
      CreateElement("input", "form-name-input", "", "form-element-name").classList.add("form-control");
      document.getElementById("form-name-input").setAttribute('type', "name");
 
      CreateElement("div", "form-element-surname", "", "form").classList.add("mb-3");
-     CreateElement("label", "form-surname-label", "Фамилия *", "form-element-surname").classList.add("form-label");
+     CreateElement("label", "form-surname-label", "Прізвище *", "form-element-surname").classList.add("form-label");
      CreateElement("input", "form-surname-input", "", "form-element-surname").classList.add("form-control");
      document.getElementById("form-name-input").setAttribute('type', "name");
 
      CreateElement("div", "form-element-patronymic", "", "form").classList.add("mb-3");
-     CreateElement("label", "form-patronymic-label", "Отчество *", "form-element-patronymic").classList.add("form-label");
+     CreateElement("label", "form-patronymic-label", "По-батькові *", "form-element-patronymic").classList.add("form-label");
      CreateElement("input", "form-patronymic-input", "", "form-element-patronymic").classList.add("form-control");
      document.getElementById("form-patronymic-input").setAttribute('type', "name");
 
@@ -181,9 +181,9 @@ function buttonCheckoutOnClick() {
           CreateElement("label", "form-delivery-label-2", "Доставка домой", "form-element-delivery").classList.add("btn", "btn-outline-primary");
           document.getElementById("form-delivery-label-2").setAttribute('for', "form-delivery-input-2");*/
 
-     CreateElement("div", "totalPrice", "Общая цена: " + calculateThePrice().toLocaleString() + " $", "div-Checkout-item").classList.add("h3", "mt-n3", "text-center");
+     CreateElement("div", "totalPrice", "Загальна ціна: " + calculateThePrice().toLocaleString() + " $", "div-Checkout-item").classList.add("h3", "mt-n3", "text-center");
 
-     CreateElement("button", "form-button-submit", "Отправить", "div-Checkout-item").classList.add("btn", "btn-primary", "mx-auto", "w-100");
+     CreateElement("button", "form-button-submit", "Відправити", "div-Checkout-item").classList.add("btn", "btn-primary", "mx-auto", "w-100");
      document.getElementById("form-button-submit").setAttribute('type', "submit");
      document.getElementById("form-button-submit").setAttribute('onclick', "buttonCheckoutSubmitOnClickAndWriteOrderToDB()");
 }
@@ -251,9 +251,9 @@ const renderCart = () => {
           CreateElement("div", "cart-header", "", "cart-div").classList.add("row", "w-100", "ml-0");
           CreateElement("div", "id", "ID", "cart-header").classList.add("col-1", "text-center");
           CreateElement("div", "img", "Фото", "cart-header").classList.add("col-3", "text-center");
-          CreateElement("div", "name", "Название машины", "cart-header").classList.add("col-3", "text-center");
-          CreateElement("div", "equipment", "Комплектация", "cart-header").classList.add("col-3", "text-center");
-          CreateElement("div", "price", "Цена", "cart-header").classList.add("col-2", "text-center");
+          CreateElement("div", "name", "Назва машини", "cart-header").classList.add("col-3", "text-center");
+          CreateElement("div", "equipment", "Комплектація", "cart-header").classList.add("col-3", "text-center");
+          CreateElement("div", "price", "Ціна", "cart-header").classList.add("col-2", "text-center");
 
           CreateElement("div", "cart-body", "", "cart-div").classList.add("row", "w-100", "ml-0");
           for (element in cart) {
@@ -264,9 +264,9 @@ const renderCart = () => {
                     CreateElement("div", "carName" + element, cart[element]["name"], "car" + element).classList.add("col-3", "h4", "text-center", "m-auto");
                     CreateElement("div", "carEquipment-div" + element, "", "car" + element).classList.add("col-3", "text-center", "m-auto");
                     CreateElement("select", "carEquipment-select" + element, "", "carEquipment-div" + element).classList.add("form-control");
-                    CreateElement("option", "option1", "Полная (стандарт)", "carEquipment-select" + element);
-                    CreateElement("option", "option2", "Полная на магнитной подвеске", "carEquipment-select" + element);
-                    CreateElement("option", "option3", "Полная с автопилотом", "carEquipment-select" + element);
+                    CreateElement("option", "option1", "Повна (стандарт)", "carEquipment-select" + element);
+                    CreateElement("option", "option2", "Повна на магнітній підвісці", "carEquipment-select" + element);
+                    CreateElement("option", "option3", "Повна з автопілотом", "carEquipment-select" + element);
                     //CreateElement("div", "carCount" + element, "", "car" + element).classList.add("col-3", "text-center", "m-auto");
                     //CreateElement("button", element, "-", "carCount" + element).classList.add("btn", "btn-secondary", "d-inline", "minus");
                     // CreateElement("div", "carCountNumber" + element, cart[element]["count"], "carCount" + element).classList.add("d-inline", "mx-2");
@@ -274,8 +274,8 @@ const renderCart = () => {
                     CreateElement("div", "carPrice" + element, cart[element]["price"].toLocaleString() + " $", "car" + element).classList.add("col-2", "text-center", "m-auto");
                }
           }
-          CreateElement("div", "totalPrice", "Общая цена: " + price.toLocaleString() + " $", "cart-div").classList.add("row", "ml-0", "h3", "mt-3", "mx-auto");
-          CreateElement("button", "checkout", "Оформить заказ", "cart-div").classList.add("btn", "btn-primary", "mx-auto");
+          CreateElement("div", "totalPrice", "Загальна ціна: " + price.toLocaleString() + " $", "cart-div").classList.add("row", "ml-0", "h3", "mt-3", "mx-auto");
+          CreateElement("button", "checkout", "Оформити замовлення", "cart-div").classList.add("btn", "btn-primary", "mx-auto");
           document.getElementById("checkout").setAttribute('onclick', "buttonCheckoutOnClick()");
 
           if (!price)
@@ -287,13 +287,13 @@ const cartIsEmpty = () => {
      document.getElementById("totalPrice").remove();
      document.getElementById("cart-header").remove();
      document.getElementById("checkout").remove();
-     CreateElement("div", "empty-cart", "Корзина пуста", "cart-div").classList.add("row", "w-100", "mx-auto", "font-weight-bolder", "h2", "align-center");
+     CreateElement("div", "empty-cart", "Кошик порожній", "cart-div").classList.add("row", "w-100", "mx-auto", "font-weight-bolder", "h2", "align-center");
 }
 
 const changeTotalPrice = () => {
      let price = calculateThePrice();
      if (price)
-          document.getElementById("totalPrice").innerText = "Общая цена: " + price.toLocaleString() + " $";
+          document.getElementById("totalPrice").innerText = "Загальна ціна: " + price.toLocaleString() + " $";
      else
           cartIsEmpty();
 }

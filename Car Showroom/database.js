@@ -109,6 +109,21 @@ function formatDate(date) {
 
      return yy + '-' + mm + '-' + dd;
 }
+
+module.exports = {app, formatDate};
+function curry(func) {
+     return function curried(...args) {
+          if (args.length >= func.length) {
+               return func.apply(this, args);
+          } 
+          else {
+               return function(...args2) {
+                    return curried.apply(this, args.concat(args2));
+               }
+          }
+     };
+}
+
 async function AddNewOrderAdditionalToDB(orderId, carId, equipment) {
      let query = "INSERT INTO `ordersadditional` (`orderId`, `carId`, `equipment`) VALUES ('"
           + orderId + "', '" + carId + "', '" + equipment + "')";
@@ -150,11 +165,12 @@ app.post('/writeOrderToDB', (request, response) => {
                clientId = await AddNewСlientToDB(receivedFromForm);
 
           let employeeId = await getEmployeeIdFromDB(receivedFromForm.fullNameEmployee)
-          console.log("clientId: ", clientId);
-          console.log("employeeId: ", employeeId);
+          //console.log("clientId: ", clientId);
+          //console.log("employeeId: ", employeeId);
 
           let orderId = await AddNewOrderToDB(employeeId, clientId, receivedFromForm);
-          console.log("orderId: ", orderId);
+          //console.log("orderId: ", orderId);
+          response.json({message: "Order successfully added!" });
      });
 });
 
@@ -297,7 +313,7 @@ app.get('/getSumOfAllOrdersFromDB', async (request, response) => {
      response.send(rows[0]['SUM(transactionAmount)']);
      connection.end();
 
-     //console.log("Сумма всех продаж за весь период", ;
+     //console.log("Сума всіх продажів за весь період", ;
 });
 app.post('/getSumOfAllOrdersForThePeriodFromDB', async (request, response) => {
      let body = '';

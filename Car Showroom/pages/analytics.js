@@ -12,14 +12,14 @@ function CreateElement(nameElement, idElement, innerText, parentId) {
 function FillInEmployeesTable(startDate = 0, endDate = 0, notOnLoad = 0) {
 
      if (startDate == 0 && endDate == 0 && notOnLoad == 0) { //при загрузке страницы
-          CreateElement("h2", "h2-employees", "Таблица статистики работников", "main-products-container").classList.add("text-center");
+          CreateElement("h2", "h2-employees", "Таблиця статистики працівників", "main-products-container").classList.add("text-center");
           CreateElement("table", "employees-table", "", "main-products-container").classList.add("table", "table-striped", "table-hover");
           CreateElement("thead", "thead", "", "employees-table")
           CreateElement("tr", "tr1", "", "thead")
-          CreateElement("td", "thead-tr1-td1", "Id сотрудника", "tr1").classList.add("text-center", "w-15");
-          CreateElement("td", "thead-tr1-td2", "Полное имя", "tr1");
-          CreateElement("td", "thead-tr1-td3", "Количество продаж", "tr1").classList.add("text-center");
-          CreateElement("td", "thead-tr1-td4", "Общая сумма продаж", "tr1").classList.add("text-center");
+          CreateElement("td", "thead-tr1-td1", "Id співробітника", "tr1").classList.add("text-center", "w-15");
+          CreateElement("td", "thead-tr1-td2", "Повне ім'я", "tr1");
+          CreateElement("td", "thead-tr1-td3", "Кількість продажів", "tr1").classList.add("text-center");
+          CreateElement("td", "thead-tr1-td4", "Загальна сума продажів", "tr1").classList.add("text-center");
 
           CreateElement("tbody", "tbody", "", "employees-table")
           fetch('/getEmployeesFromDB', {
@@ -106,14 +106,14 @@ function FillInEmployeesTable(startDate = 0, endDate = 0, notOnLoad = 0) {
 
 function FillInCarsStatisticsTable(startDate = 0, endDate = 0, notOnLoad = 0) {
      if (startDate == 0 && endDate == 0 && notOnLoad == 0) { //при загрузке страницы
-          CreateElement("h2", "h2-cars-statistics", "Таблица статистики машин", "main-products-container").classList.add("text-center");
+          CreateElement("h2", "h2-cars-statistics", "Таблиця статистики машин", "main-products-container").classList.add("text-center");
           CreateElement("table", "cars-statistics-table", "", "main-products-container").classList.add("table", "table-striped", "table-hover");
           CreateElement("thead", "cars-statistics-thead", "", "cars-statistics-table")
           CreateElement("tr", "cars-statistics-tr1", "", "cars-statistics-thead")
-          CreateElement("td", "cars-statistics-thead-tr1-td1", "Id машины", "cars-statistics-tr1").classList.add("text-center");
-          CreateElement("td", "cars-statistics-thead-tr1-td2", "Название", "cars-statistics-tr1").classList.add("text-center");
-          CreateElement("td", "cars-statistics-thead-tr1-td3", "Количество проданых", "cars-statistics-tr1").classList.add("text-center");
-          CreateElement("td", "cars-statistics-thead-tr1-td4", "Общая сумма продаж", "cars-statistics-tr1").classList.add("text-center");
+          CreateElement("td", "cars-statistics-thead-tr1-td1", "Id машини", "cars-statistics-tr1").classList.add("text-center");
+          CreateElement("td", "cars-statistics-thead-tr1-td2", "Назва", "cars-statistics-tr1").classList.add("text-center");
+          CreateElement("td", "cars-statistics-thead-tr1-td3", "Кількість проданих", "cars-statistics-tr1").classList.add("text-center");
+          CreateElement("td", "cars-statistics-thead-tr1-td4", "Загальна сума продажів", "cars-statistics-tr1").classList.add("text-center");
 
           CreateElement("tbody", "cars-statistics-tbody", "", "cars-statistics-table")
 
@@ -197,14 +197,14 @@ function FillInCarsStatisticsTable(startDate = 0, endDate = 0, notOnLoad = 0) {
 
 function FillInClientsStatisticsTable(startDate = 0, endDate = 0, notOnLoad = 0) {
      if (startDate == 0 && endDate == 0 && notOnLoad == 0) { //при загрузке страницы
-          CreateElement("h2", "h2-clients", "Таблица статистики клиентов", "main-products-container").classList.add("text-center");
+          CreateElement("h2", "h2-clients", "Таблиця статистики клієнтів", "main-products-container").classList.add("text-center");
           CreateElement("table", "clients-table", "", "main-products-container").classList.add("table", "table-striped", "table-hover");
           CreateElement("thead", "clients-thead", "", "clients-table")
           CreateElement("tr", "clients-tr1", "", "clients-thead")
-          CreateElement("td", "clients-thead-tr1-td1", "Id клиента", "clients-tr1").classList.add("text-center", "w-15");
-          CreateElement("td", "clients-thead-tr1-td2", "Полное имя", "clients-tr1");
+          CreateElement("td", "clients-thead-tr1-td1", "Id клієнта", "clients-tr1").classList.add("text-center", "w-15");
+          CreateElement("td", "clients-thead-tr1-td2", "Повне ім'я", "clients-tr1");
           CreateElement("td", "clients-thead-tr1-td3", "Количество покупок", "clients-tr1").classList.add("text-center");
-          CreateElement("td", "clients-thead-tr1-td4", "Протраченая сумма", "clients-tr1").classList.add("text-center");
+          CreateElement("td", "clients-thead-tr1-td4", "Витрачена сума", "clients-tr1").classList.add("text-center");
 
           CreateElement("tbody", "clients-tbody", "", "clients-table")
           fetch('/getClientsFromDB', {
@@ -301,7 +301,7 @@ function OnChangeDates() {
      })
           .then(result => result.text())
           .then(result => {
-               document.getElementById("b-sales-amount").innerText = "Сумма всех продаж за период с " + startDate + " по " + endDate + " составляет: " + result;
+               document.getElementById("b-sales-amount").innerText = "Сума всіх продажів за період з " + startDate + " до " + endDate + " складає: " + result;
           });
      FillInTables(startDate, endDate);
 }
@@ -314,9 +314,9 @@ function PeriodChanged() {
                .then(result => result.text())
                .then(result => {
                     if (document.getElementById("b-sales-amount") == undefined)
-                         CreateElement("b", "b-sales-amount", "Сумма всех продаж за весь период " + result, "sales-amount").setAttribute('style', "font-size: 1.5em;");
+                         CreateElement("b", "b-sales-amount", "Сума всіх продажів за весь період " + result, "sales-amount").setAttribute('style', "font-size: 1.5em;");
                     else
-                         document.getElementById("b-sales-amount").innerText = "Сумма всех продаж за весь период: " + result;
+                         document.getElementById("b-sales-amount").innerText = "Сума всіх продажів за весь період: " + result;
                });
           if (document.getElementById("start-date-div") == undefined)
                FillInTables();
