@@ -274,7 +274,11 @@ app.post('/getClientStatisticsForThePeriodFromDB', (request, response) => {
           connection.end();
      });
 });
-
+// Error handling middleware
+app.use((err, req, res, next) => {
+     console.error(err); // Log the error for debugging
+     res.status(500).send('Internal Server Error');
+ });
 app.listen(3333, () => {
      console.log('Application listening on port 3333!');
 });
