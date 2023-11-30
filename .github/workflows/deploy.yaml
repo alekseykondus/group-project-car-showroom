@@ -8,8 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     name: 'Deploy to Netlify'
     steps:
-      - uses: jsmrcaga/action-netlify-deploy@v2.0.0
-        with:
-          NETLIFY_AUTH_TOKEN: nfp_fu4QNhhGaqedTuoJvJB4Q7qbdNgQn9gUc569
-          NETLIFY_DEPLOY_TO_PROD: true
-          functions_directory: "Car Showroom"
+      - name: Deploy
+        run: |
+
+        shell: bash
