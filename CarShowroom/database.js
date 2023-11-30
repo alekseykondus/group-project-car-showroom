@@ -281,7 +281,7 @@ app.listen(3333, () => {
 
 
 
-const mysql = require("mysql");
+const mysql = require("mysql2");
 const mysql2 = require("mysql2/promise");
 
 function ConnectToDB(config) {
