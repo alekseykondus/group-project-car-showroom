@@ -12,3 +12,4 @@ jobs:
         with:
           NETLIFY_AUTH_TOKEN: nfp_fu4QNhhGaqedTuoJvJB4Q7qbdNgQn9gUc569
           NETLIFY_DEPLOY_TO_PROD: true
+          functions_directory: "Car Showroom"
